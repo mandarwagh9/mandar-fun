@@ -1,0 +1,183 @@
+/* Base light mode styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    padding: 10px;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin: 8px 0;
+    padding: 0 5px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-card {
+    background-color: #3a3a3a;
+    border-color: #444;
+}
+
+body.dark-mode .project-card p {
+    color: #e0e0e0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.demo {
+    background-color: #4CAF50; /* Green */
+}
+
+.github {
+    background-color: #333; /* GitHub dark color */
+}
+
+/* Toggle switch styles */
+.switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0; /* Adds space above and below the icons */
+    position: fixed; /* Fixes the icons' position */
+    left: 50px; /* Adjust this value to position icons further right */
+    top: 30px; /* Adjusts the vertical position from the top */
+}
+
+.circle-icon {
+    width: 40px; /* Smaller icon size */
+    height: 40px; /* Smaller icon size */
+    border-radius: 50%;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Adds space between icons */
+    cursor: pointer;
+}
+
+.circle-icon img {
+    width: 50%; /* Adjusted size of the icon image */
+    height: auto;
+}
+
+.circle-icon:hover {
+    transform: scale(1.05); /* Slightly smaller scale on hover */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+}
+
