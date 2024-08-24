@@ -1,8 +1,8 @@
 /* Base light mode styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #000000;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
