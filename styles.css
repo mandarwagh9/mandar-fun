@@ -81,12 +81,13 @@ body.dark-mode .project-card p {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    flex-wrap: wrap; /* Allow buttons to wrap if necessary */
 }
 
 .button {
     display: inline-block;
     padding: 8px 12px;
-    margin: 0 5px;
+    margin: 5px; /* Add space between buttons */
     border-radius: 4px;
     text-decoration: none;
     color: #fff;
@@ -180,27 +181,14 @@ input:checked + .slider:before {
     transform: scale(1.05); /* Slightly smaller scale on hover */
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
 }
-/* Buttons */
-.buttons {
-    display: flex; /* Ensure buttons are side by side on larger screens */
-    justify-content: center;
-    margin-top: 10px;
-    flex-wrap: wrap; /* Allow buttons to wrap if necessary */
-}
-
-.button {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 5px; /* Add space between buttons */
-    border-radius: 4px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 0.9rem;
-    text-align: center;
-}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout for tablets */
+        padding: 10px;
+    }
+
     .buttons {
         flex-direction: column; /* Stack buttons vertically on small screens */
         align-items: center; /* Center align buttons */
@@ -212,4 +200,31 @@ input:checked + .slider:before {
     }
 }
 
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 10px;
+    }
 
+    h1 {
+        font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjusted font size for smaller screens */
+    }
+
+    .project-card img {
+        height: 100px; /* Smaller image height for mobile */
+    }
+
+    .icon-container {
+        top: 10px; /* Adjusted position for mobile */
+        left: 10px;
+    }
+
+    .switch {
+        top: 10px; /* Adjusted position for mobile */
+        right: 10px;
+    }
+}
